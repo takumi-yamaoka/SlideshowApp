@@ -14,9 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var switchButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet var onTapAction: UITapGestureRecognizer!
     
     
-    let imageNameArray = ["man1.png","man2.png","man3.png","man4.png","man5.png"]
+    
+    let imageNameArray = ["man1.jpeg","man2.jpeg","man3.jpeg","man4.jpeg","man5.jpeg"]
     var dispImageNo = 0
     var timer: Timer!
 
@@ -80,9 +82,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onTapAction(_ sender: Any) {
+
+        self.performSegue(withIdentifier: "toZoomIn", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if self.timer != nil {
+            self.timer.invalidate()
+            self.timer = nil
+        }
+        switchButton.setTitle("再生", for: .normal)
         let SlideViewController:SlideViewController = segue.destination as! SlideViewController
         let name = imageNameArray[dispImageNo]
         let image = UIImage(named: name)
@@ -92,7 +101,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let image = UIImage(named: "man1.png")
+        let image = UIImage(named: "man1.jpeg")
         imageView.image = image
     }
 
@@ -100,9 +109,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func unwind(_ segue: UIStoryboardSegue){
-        
-    }
 
 }
 

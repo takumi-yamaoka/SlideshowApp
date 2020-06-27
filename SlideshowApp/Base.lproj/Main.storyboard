@@ -68,6 +68,7 @@
                         <outlet property="backButton" destination="nkC-7s-xKK" id="phE-QT-Zme"/>
                         <outlet property="imageView" destination="Jdx-vo-rPP" id="Jj5-s3-IsM"/>
                         <outlet property="nextButton" destination="ibm-j1-Tl9" id="pbk-ho-HjX"/>
+                        <outlet property="onTapAction" destination="SE5-jQ-fSB" id="Lyq-58-Wfh"/>
                         <outlet property="switchButton" destination="owl-gW-hh4" id="oQA-1P-x1k"/>
                     </connections>
                 </viewController>
@@ -100,7 +101,6 @@
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="backBtn:" destination="90v-pD-Nxy" eventType="touchUpInside" id="i8p-7V-Vq2"/>
-                                    <segue destination="mrg-AL-Q5c" kind="unwind" unwindAction="unwind:" id="ud9-nA-mCG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,7 +121,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTl-oW-1lB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="mrg-AL-Q5c" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1039.1304347826087" y="116.51785714285714"/>
         </scene>

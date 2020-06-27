@@ -11,6 +11,7 @@ import UIKit
 class SlideViewController: UIViewController {
 
     @IBOutlet weak var SlideImage: UIImageView!
+    @IBOutlet weak var backBtn: UIButton!
     
     let slideimage = 0
     var selectedImg: UIImage!
@@ -24,7 +25,7 @@ class SlideViewController: UIViewController {
     
     
     @IBAction func backBtn(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+       dismiss(animated: true, completion: nil)
     }
     
     /*
