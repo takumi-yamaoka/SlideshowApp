@@ -15,6 +15,8 @@ class SlideViewController: UIViewController {
     
     let slideimage = 0
     var selectedImg: UIImage!
+    let imageNameArray = ["man1.jpeg","man2.jpeg","man3.jpeg","man4.jpeg","man5.jpeg"]
+    var dispImageNo = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,8 @@ class SlideViewController: UIViewController {
     @IBAction func backBtn(_ sender: Any) {
        dismiss(animated: true, completion: nil)
     }
+    
+    
     
     /*
     // MARK: - Navigation

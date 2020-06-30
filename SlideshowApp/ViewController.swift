@@ -91,6 +91,9 @@ class ViewController: UIViewController {
             self.timer.invalidate()
             self.timer = nil
         }
+        nextButton.isEnabled = true
+        backButton.isEnabled = true
+        self.view.backgroundColor = UIColor.white
         switchButton.setTitle("再生", for: .normal)
         let SlideViewController:SlideViewController = segue.destination as! SlideViewController
         let name = imageNameArray[dispImageNo]
